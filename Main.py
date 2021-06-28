@@ -7,6 +7,5 @@ def defintion(word):
     else: 
         return ("This word was not found!")
 
-
 word = input("select a word:")
 print(defintion(word))
