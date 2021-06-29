@@ -7,12 +7,14 @@ def defintion(word):
     if word in data:
         return data[word]
     elif len(get_close_matches(word, data.keys())) > 0:
-        choice = input("Did you mean %s?" % get_close_matches(word, data.keys())[0] )
+        choice = input("Did you mean %s? Enter Y/N:" % get_close_matches(word, data.keys())[0] )
         choice = choice.lower()
         if choice == "y":
             return data[get_close_matches(word, data.keys())[0]]
+        elif choice == "n":
+            return ("The word you're looking for was not found!")
         else:
-            return ("This word was not found!")
+            return ("Your entry was not understood!")
     else: 
         return ("This word was not found!")
 
