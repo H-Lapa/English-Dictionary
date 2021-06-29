@@ -19,4 +19,10 @@ def defintion(word):
         return ("This word was not found!")
 
 word = input("select a word:")
-print(defintion(word))
+result = (defintion(word))
+
+if type(result) == list:
+    for item in result:
+        print(item)
+else:
+    print(item)
